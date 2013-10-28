@@ -7,9 +7,11 @@ gem 'rails', '3.2.14'
 
 gem 'pg'
 
+group :development do
+  gem 'better_errors'
+end
 group :development, :test do
   gem 'rspec-rails'
-  gem 'better_errors'
   gem 'binding_of_caller'
 end
 
