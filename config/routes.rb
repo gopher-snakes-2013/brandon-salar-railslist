@@ -1,6 +1,8 @@
 CraigslistRails::Application.routes.draw do
 
-  resources :categories, only: [:index]
+  resources :categories, only: [:index] do
+    resources :posts
+  end
 
   root :to => "categories#index"
 

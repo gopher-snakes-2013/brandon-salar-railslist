@@ -17,4 +17,10 @@ describe "the homepage" do
     visit root_path
     expect(page).to have_content category.name
   end
+
+  it "is clickable", :js => true do
+    visit root_path
+    click_link category.name
+    expect(page).to have_content "test"
+  end
 end
