@@ -13,3 +13,8 @@ categories.each do |category|
 end
 
 
+posts = [{title: 'brandon sucks', description: 'alot alot alot alot', category_id: Category.all.sample.id}, {title: 'salar sucks', description: 'a little', category_id: Category.all.sample.id}]
+
+posts.each do |post|
+  Post.create(post, without_protection: true)
+end
