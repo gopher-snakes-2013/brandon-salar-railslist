@@ -1,7 +1,9 @@
 <!-- Use a helper method here so the view doesnt access the database directly -->
 <h1> <%= @category_name %> </h1>
 
-<% @posts.each do |post| %>
-  <%= post.title%></br>
-<%end %>
-
+<div>
+  <% @posts.each do |post| %>
+  <span><%= link_to post.title, post_path(post.id) %></span>
+  </br>
+  <% end %>
+</div>
