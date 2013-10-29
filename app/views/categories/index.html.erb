@@ -3,6 +3,17 @@
 <div>
   <% @categories.each do |category| %>
 
-    <span><%= link_to category.name, category_path(category.id) %></span></br>
+  <span><%= link_to category.name, category_path(category.id) %></span></br>
   <% end %>
 </div>
+
+
+<%= form_for :post, url: posts_path do |f| %>
+
+<%= select_tag 'category', options_from_collection_for_select(Category.all, :id, :name)%>
+
+<%= f.text_field :title %>
+<%= f.text_field :description %>
+<%= f.submit "create" %>
+<% end %>
+
