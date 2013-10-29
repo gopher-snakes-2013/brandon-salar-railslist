@@ -1,0 +1,7 @@
+<!-- Use a helper method here so the view doesnt access the database directly -->
+<h1> <%= @category_name %> </h1>
+
+<% @posts.each do |post| %>
+  <%= post.title%>
+<%end %>
+

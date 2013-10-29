@@ -7,6 +7,9 @@ describe "the homepage" do
     test_cat.save
     test_cat
   }
+  # let!(:post){
+
+  # }
   # before :each do
   #   test_cat = Category.new
   #   test_cat.name = "test"
