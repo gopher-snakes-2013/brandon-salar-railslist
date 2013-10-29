@@ -1,8 +1,7 @@
 <h1>Railslist Home Page</h1>
 <h3>Here are all our categories!</h3>
 <div>
-<% @categories.each do |category| %>
-
-  <span><%= link_to category.name, categories_path(@categories) %></span></br>
-<% end %>
+  <% @categories.each do |category| %>
+    <span><%= link_to category.name, categories_path(@categories) %></span></br>
+  <% end %>
 </div>

@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20131028213151) do
   end
 
   create_table "posts", :force => true do |t|
+    t.integer  "category_id"
     t.string   "title"
     t.text     "description"
     t.datetime "created_at",  :null => false
